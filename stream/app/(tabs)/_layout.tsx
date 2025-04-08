@@ -1,12 +1,17 @@
 import { Tabs } from "expo-router";
+import HomeFillIcon from "../../assets/icons/HomeFillIcon";
+import HomeStrokeIcon from "../../assets/icons/HomeStrokeIcon";
 
-export default function RootLayout() {
+export default function TabLayout() {
   return (
     <Tabs>
       <Tabs.Screen
         name="index"
         options={{
           tabBarLabel: "Home",
+          headerShown: false,
+          tabBarIcon: ({ focused }) =>
+            focused ? <HomeFillIcon /> : <HomeStrokeIcon />,
         }}
       />
       <Tabs.Screen
