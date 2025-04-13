@@ -2,7 +2,7 @@ import React from "react";
 import Svg, { Path, Stop, Defs, LinearGradient } from "react-native-svg";
 import { COLORS_THEME_1 } from "../../constants/colors";
 
-const HomeFillIcon = () => {
+const HomeFillIcon = ({ color }: { color: string }) => {
   return (
     <Svg width="23" height="22" viewBox="0 0 23 22" fill="none">
       <Path
@@ -22,8 +22,8 @@ const HomeFillIcon = () => {
           y2="18.8175"
           gradientUnits="userSpaceOnUse"
         >
-          <Stop stopColor={COLORS_THEME_1.tabIconsFill} />
-          <Stop offset="1" stopColor={COLORS_THEME_1.tabIconsFill} />
+          <Stop stopColor={color} />
+          <Stop offset="1" stopColor={color} />
         </LinearGradient>
         <LinearGradient
           id="paint1_linear_129_11357"
@@ -33,8 +33,8 @@ const HomeFillIcon = () => {
           y2="18.8175"
           gradientUnits="userSpaceOnUse"
         >
-          <Stop stopColor={COLORS_THEME_1.tabIconsFill} />
-          <Stop offset="1" stopColor={COLORS_THEME_1.tabIconsFill} />
+          <Stop stopColor={color} />
+          <Stop offset="1" stopColor={color} />
         </LinearGradient>
       </Defs>
     </Svg>

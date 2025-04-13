@@ -10,16 +10,16 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    WorkSans_Light: require("@/assets/fonts/WorkSans-Light"),
-    WorkSans_Regular: require("@/assets/fonts/WorkSans-Regular"),
-    WorkSans_Medium: require("@/assets/fonts/WorkSans-Medium"),
-    WorkSans_SemiBold: require("@/assets/fonts/WorkSans-SemiBold"),
-    WorkSans_Bold: require("@/assets/fonts/WorkSans-Bold"),
-    WorkSans_Light_Italic: require("@/assets/fonts/WorkSans-LightItalic"),
-    WorkSans_Regular_Italic: require("@/assets/fonts/WorkSans-Italic"),
-    WorkSans_Medium_Italic: require("@/assets/fonts/WorkSans-MediumItalic"),
-    WorkSans_SemiBold_Italic: require("@/assets/fonts/WorkSans-SemiBoldItalic"),
-    WorkSans_Bold_Italic: require("@/assets/fonts/WorkSans-BoldItalic"),
+    WorkSans_Light: require("../assets/fonts/WorkSans-Light.ttf"),
+    WorkSans_Regular: require("../assets/fonts/WorkSans-Regular.ttf"),
+    WorkSans_Medium: require("../assets/fonts/WorkSans-Medium.ttf"),
+    WorkSans_SemiBold: require("../assets/fonts/WorkSans-SemiBold.ttf"),
+    WorkSans_Bold: require("../assets/fonts/WorkSans-Bold.ttf"),
+    WorkSans_Light_Italic: require("../assets/fonts/WorkSans-LightItalic.ttf"),
+    WorkSans_Regular_Italic: require("../assets/fonts/WorkSans-Italic.ttf"),
+    WorkSans_Medium_Italic: require("../assets/fonts/WorkSans-MediumItalic.ttf"),
+    WorkSans_SemiBold_Italic: require("../assets/fonts/WorkSans-SemiBoldItalic.ttf"),
+    WorkSans_Bold_Italic: require("../assets/fonts/WorkSans-BoldItalic.ttf"),
   });
 
   useEffect(() => {
