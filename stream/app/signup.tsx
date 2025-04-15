@@ -5,7 +5,6 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-  Image,
   KeyboardAvoidingView,
   Platform,
   TouchableWithoutFeedback,
@@ -19,8 +18,10 @@ export default function SignupScreen() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
 
+  const handleSignup = () => {
+    console.log(fullName, email, password);
+  };
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <KeyboardAvoidingView
@@ -29,14 +30,6 @@ export default function SignupScreen() {
       >
         <StatusBar style="auto" />
         <ScrollView showsVerticalScrollIndicator={false}>
-          <View style={styles.logoContainer}>
-            <Image
-              source={{ uri: "https://via.placeholder.com/150" }}
-              style={styles.logo}
-            />
-            <Text style={styles.logoText}>App Name</Text>
-          </View>
-
           <View style={styles.formContainer}>
             <Text style={styles.title}>Create Account</Text>
             <Text style={styles.subtitle}>Sign up to get started</Text>
@@ -75,18 +68,10 @@ export default function SignupScreen() {
               />
             </View>
 
-            <View style={styles.inputContainer}>
-              <Text style={styles.inputLabel}>Confirm Password</Text>
-              <TextInput
-                style={styles.input}
-                placeholder="******"
-                value={confirmPassword}
-                onChangeText={setConfirmPassword}
-                secureTextEntry
-              />
-            </View>
-
-            <TouchableOpacity style={styles.signupButton}>
+            <TouchableOpacity
+              style={styles.signupButton}
+              onPress={handleSignup}
+            >
               <Text style={styles.signupButtonText}>Sign Up</Text>
             </TouchableOpacity>
 

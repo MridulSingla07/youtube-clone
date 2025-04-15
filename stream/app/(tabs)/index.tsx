@@ -89,7 +89,7 @@ export default function App() {
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.header}>
         <View style={styles.logoContainer}>
-          <FontAwesome5 name="stream" size={24} color="black" />{" "}
+          <FontAwesome5 name="stream" size={24} color="black" />
           <ThemeText
             fontFamily={FontStyles.WorkSans_Bold}
             style={styles.logoText}

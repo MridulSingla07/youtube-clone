@@ -1,8 +1,5 @@
 import { Tabs } from "expo-router";
-import HomeFillIcon from "../../assets/icons/HomeFillIcon";
-import HomeStrokeIcon from "../../assets/icons/HomeStrokeIcon";
 import { COLORS_THEME_1 } from "../../constants/colors";
-import { View } from "react-native";
 import Entypo from "@expo/vector-icons/Entypo";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
@@ -31,15 +28,6 @@ export default function TabLayout() {
                   : COLORS_THEME_1.tabIconsStroke
               }
             />
-            // <View>
-            //   <HomeFillIcon
-            //     color={
-            //       focused
-            //         ? COLORS_THEME_1.tabIconsFill
-            //         : COLORS_THEME_1.tabIconsStroke
-            //     }
-            //   />
-            // </View>
           ),
         }}
       />

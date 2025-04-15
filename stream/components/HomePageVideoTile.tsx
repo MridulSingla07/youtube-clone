@@ -63,7 +63,8 @@ export default function HomePageVideoTile({
           resizeMode="cover"
         />
         <View style={styles.durationBadge}>
-          <ThemeText color="white">{formatDuration(duration)}</ThemeText>
+          {/* <ThemeText color="white">{formatDuration(duration)}</ThemeText> */}
+          <ThemeText color="white">hh</ThemeText>
         </View>
       </View>
 
@@ -78,9 +79,10 @@ export default function HomePageVideoTile({
           <ThemeText>{ownerName}</ThemeText>
 
           <View style={styles.statsContainer}>
-            <ThemeText>
-              {formatViews(views)} views • {formatUploadDate(createdAt)}
-            </ThemeText>
+            {/* <ThemeText>
+              {`${formatViews(views)} views • ${formatUploadDate(createdAt)}`}
+            </ThemeText> */}
+            <ThemeText>hello</ThemeText>
           </View>
         </View>
 
