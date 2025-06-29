@@ -33,7 +33,9 @@ const registerUser = asyncHandler(async (req, res) => {
   // check for user creation
   // return response
 
-  const { fullname, username, email, password } = req.body;
+  const { fullname, email, password } = req.body;
+
+  let { username } = req.body;
 
   username = username.toLowerCase();
 
@@ -96,16 +98,13 @@ const loginUser = asyncHandler(async (req, res) => {
   // if password correct -> access and refresh token
   // send cookies
 
-  const { email, password, username } = req.body;
-
-  // username = username.toLowerCase();
-
-  if (!username && !email) {
+  const { email, password } = req.body;
+  if (!email) {
     throw new ApiError(400, "Username or email is required");
   }
 
   const existingUser = await User.findOne({
-    $or: [{ email }, { username }],
+    $or: [{ email }],
   });
 
   if (!existingUser) {
