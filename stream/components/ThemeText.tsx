@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, TextStyle, TextProps } from "react-native";
+import { Text, TextStyle, TextProps, StyleProp } from "react-native";
 
 export enum FontStyles {
   WorkSans_Light = "WorkSans_Light",
@@ -16,7 +16,7 @@ export enum FontStyles {
 interface ThemeTextProps extends TextProps {
   fontSize?: number;
   fontFamily?: FontStyles;
-  style?: TextStyle | TextStyle[];
+  style?: StyleProp<TextStyle>;
   children: React.ReactNode;
   color?: string;
 }

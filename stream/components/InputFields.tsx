@@ -5,13 +5,16 @@ import {
   StyleProp,
   TextStyle,
   ViewStyle,
+  View,
 } from "react-native";
-import { FontStyles } from "./ThemeText";
+import { FontStyles, ThemeText } from "./ThemeText";
+import { COLORS_THEME_1 } from "../constants/colors";
 
 interface InputFieldProps {
   value: string;
   onChangeText: (text: string) => void;
   placeholder?: string;
+  label?: string;
   isPassword?: boolean;
   style?: StyleProp<TextStyle | ViewStyle>;
 }
@@ -19,19 +22,25 @@ interface InputFieldProps {
 export const InputField: React.FC<InputFieldProps> = ({
   value,
   onChangeText,
-  placeholder = "Enter value",
+  placeholder,
   isPassword = false,
   style,
+  label,
 }) => {
   return (
-    <TextInput
-      style={[styles.input, style]}
-      placeholder={placeholder}
-      value={value}
-      onChangeText={onChangeText}
-      secureTextEntry={isPassword}
-      autoCapitalize="none"
-    />
+    <View>
+      <ThemeText color={COLORS_THEME_1.textSecondary} fontSize={12}>
+        {label}
+      </ThemeText>
+      <TextInput
+        style={[styles.input, style]}
+        placeholder={placeholder}
+        value={value}
+        onChangeText={onChangeText}
+        secureTextEntry={isPassword}
+        autoCapitalize="none"
+      />
+    </View>
   );
 };
 
@@ -44,5 +53,6 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     fontSize: 20,
     fontFamily: FontStyles.WorkSans_Regular,
+    color: COLORS_THEME_1.textPrimary,
   },
 });
